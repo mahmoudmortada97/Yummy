@@ -1,24 +1,24 @@
 const submitBtn = document.querySelector("#submitBtn"),
   inputs = document.querySelectorAll("#contact-us input");
 
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener("input", () => {
-    if (
-      inputs[0].classList.contains("success") &&
-      inputs[1].classList.contains("success") &&
-      inputs[2].classList.contains("success") &&
-      inputs[3].classList.contains("success") &&
-      inputs[4].classList.contains("success") &&
-      inputs[5].classList.contains("success")
-    ) {
-      submitBtn.removeAttribute("disabled");
-      console.log("true");
-    } else {
-      submitBtn.setAttribute("disabled", "");
-      console.log("false");
-    }
-  });
-}
+// for (let i = 0; i < inputs.length; i++) {
+//   inputs[i].addEventListener("input", () => {
+//     if (
+//       inputs[0].classList.contains("success") &&
+//       inputs[1].classList.contains("success") &&
+//       inputs[2].classList.contains("success") &&
+//       inputs[3].classList.contains("success") &&
+//       inputs[4].classList.contains("success") &&
+//       inputs[5].classList.contains("success")
+//     ) {
+//       submitBtn.removeAttribute("disabled");
+//       console.log("true");
+//     } else {
+//       submitBtn.setAttribute("disabled", "");
+//       console.log("false");
+//     }
+//   });
+// }
 
 $("form input").on("input", function (e) {
   isValidInput($(e.target));

@@ -12,7 +12,7 @@ export default class Ingredient {
       "https://www.themealdb.com/api/json/v1/1/list.php?i=list"
     );
     const ingredientsAPIData = (await ingredientsAPI.json()).meals;
-    for (let i = Math.floor(Math.random() * 50); i < 50; i++) {
+    for (let i = Math.floor(Math.random() * 50 + 10); i < 100; i++) {
       this.ingredientsContainer
         .append(`   <div class="ingredient col-sm-6 col-md-4 col-lg-3" role="button" data-ingredientName="${
         ingredientsAPIData[i].strIngredient.split(" ").lenght > 1
