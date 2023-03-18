@@ -1,5 +1,18 @@
 $("form input").on("input", function (e) {
   isValidInput($(e.target));
+  if (
+    $("#contact-us #name").hasClass("success") &&
+    $("#contact-us #age").hasClass("success") &&
+    $("#contact-us #email").hasClass("success") &&
+    $("#contact-us #phone").hasClass("success") &&
+    $("#contact-us #pass").hasClass("success")
+  ) {
+    $("#submitBtn").css({ "background-color": "blue" });
+    $("#submitBtn").removeAttr("disabled");
+  } else {
+    $("#submitBtn").css({ "background-color": "gray" });
+    $("#submitBtn").attr("disabled", "");
+  }
 });
 function isValidInput(input) {
   const uservalue = input.val();
