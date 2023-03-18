@@ -32,10 +32,12 @@ export default class Area {
         </div>
       </div>`);
     }
+    // Put specified flag for unkown country
     $("#area #id-25").attr(
       "src",
       "https://upload.wikimedia.org/wikipedia/commons/2/2e/Unknown_flag_-_European_version.png"
     );
+    // get all meals within specific country
     const home = new Home();
     $(".country").click((e) => {
       const countryName = $(e.target)

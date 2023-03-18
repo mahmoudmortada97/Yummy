@@ -10,10 +10,9 @@ export default class Search {
   }
   getMealsBySearch = async function (e) {
     let mealsAPI; // Meal API
-
     this.mealsContainer.html(" "); // Clear The meal container
 
-    /* When Start Typing in Specific input clear the other one to prvent conflict */
+    /* When Start Typing in Specific input clear the other one to prevent conflict */
     if ($(e.target).attr("id") == "searchByFirstLetter") {
       $(this.searchByName).val("");
       // Get All Meals With FirstLetter = User Entered Letter
@@ -25,7 +24,6 @@ export default class Search {
     } else {
       $(this.searchByFirstLetter).val("");
       // Get All Meals With FullName = User Entered FullName
-
       mealsAPI = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${$(
           e.target
@@ -61,8 +59,9 @@ export default class Search {
           </div>`);
       }
     }
-    const detail = new Detail($(".details"));
 
+    // To Get details of the clicked meal within search
+    const detail = new Detail($(".details"));
     $(".meal").click(function (e) {
       const mealID = $(e.target).closest("div.meal").attr("data-id");
       detail.getMealDetails(mealID);

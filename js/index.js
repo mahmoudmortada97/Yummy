@@ -47,6 +47,7 @@ $("#logo").click((e) => {
     $("#main").removeClass("d-none");
   });
 });
+
 // close details and back to main section
 $("#closeBtn").click(function () {
   $("#details").addClass("d-none", function () {

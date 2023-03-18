@@ -14,11 +14,13 @@ export default class Detail {
   };
 
   showMealDetails = (detailsAPIData) => {
+    // If Getting Meal through Search then we need to hide search and meals to show details
     $("#search").addClass("d-none");
     $("#main").addClass("d-none", function () {
       $("#details").removeClass("d-none");
     });
-    this.details.html(" ").html(`
+    // remove any content in details and get the new clicked one
+    this.details.html(" ").html(`  
     <div class="col-md-4">
     <div class="content">
       <img
@@ -73,6 +75,9 @@ export default class Detail {
     </div>
   </div>`);
 
+    /* Add Recipes + Ingredients  Through Filtering API Keys then looping to add the content with 
+    ignoring the null and empty values
+*/
     let keys = Object.keys(detailsAPIData[0]);
     let keysMeasures = keys.filter((e) => e.startsWith("strMeasure"));
     let keysIngredients = keys.filter((e) => e.startsWith("strIngredient"));
@@ -90,9 +95,10 @@ export default class Detail {
    `);
       }
     }
+    // Getting Tags then showing them
     if (detailsAPIData[0].strTags) {
       const tagsArray = detailsAPIData[0].strTags.split(",");
-      console.log(tagsArray); 
+      console.log(tagsArray);
       for (let i = 0; i < tagsArray.length; i++) {
         $(".tags")
           .append(` <span id="status" class="badge text-bg-success">${tagsArray[i]}</span>

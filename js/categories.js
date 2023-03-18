@@ -7,14 +7,12 @@ export default class Category {
     this.categoriesContainer = categoriesContainer;
   }
   getAllMealCategories = async () => {
-    let ingredientData;
-
     this.categoriesContainer.html(" ");
     const categoriesAPI = await fetch(
       "https://www.themealdb.com/api/json/v1/1/categories.php"
     );
     const categoriesAPIData = (await categoriesAPI.json()).categories;
-    
+
     for (let i = 0; i < categoriesAPIData.length; i++) {
       this.categoriesContainer
         .append(` <div class="category col-sm-6 col-md-4 col-lg-3" role="button" 
@@ -36,6 +34,8 @@ export default class Category {
         </div>
       </div>`);
     }
+
+    // Get meals of specified category
     const home = new Home();
     $(".category").click((e) => {
       const categoryName = $(e.target)

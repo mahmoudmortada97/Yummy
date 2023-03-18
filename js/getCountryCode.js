@@ -1,3 +1,4 @@
+// I Made it my self as i didnot find API That return Country Code by Nationality
 export default function getCountryCode(nationality) {
   switch (nationality) {
     case "American":

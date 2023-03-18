@@ -38,6 +38,7 @@ export default class Ingredient {
         </div>
       </div>`);
     }
+    // get meals of specified ingredients
     const home = new Home();
     $(".ingredient").click((e) => {
       const ingredientName = $(e.target)
