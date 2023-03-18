@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
+    <!-- FavIcon -->
+    <title>Yummiy</title>
+
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <!-- Font Awesome  -->
+
+    <!-- BootStrap -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- BootStrap -->
+
+    <!-- My Own Styles -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+    <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/categories.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/Ingredient.css" />
+    <link rel="stylesheet" href="styles/area.css" />
+    <link rel="stylesheet" href="styles/details.css" />
+    <!-- My Own Style -->
+  </head>
+  <body class="bg-dark">
+    <!-- Side Bar -->
+    <div id="sidebar">
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header role="button" id="logo">
+          <img src="assets/-meal_89750.ico" class="img-fluid" alt="" />
+        </header>
+        <ul>
+          <li data-aos="fade-right">
+            <a data-section="search" href="#"
+              ><i class="fa-solid fa-magnifying-glass"></i>Search</a
+            >
+          </li>
+          <li>
+            <a data-section="categories" href="#"
+              ><i class="fa-solid fa-layer-group"></i>categories</a
+            >
+          </li>
+          <li>
+            <a data-section="area" href="#"
+              ><i class="fa-solid fa-flag"></i>Area</a
+            >
+          </li>
+          <li>
+            <a data-section="ingredients" href="#"
+              ><i class="fa-solid fa-mortar-pestle"></i>Ingredients</a
+            >
+          </li>
+          <li>
+            <a data-section="contact-us" href="#"
+              ><i class="far fa-envelope"></i>Contact</a
+            >
+          </li>
+        </ul>
+        <footer>
+          <div
+            class="social d-flex justify-content-evenly align-items-center mb-3"
+          >
+            <a href="https://www.facebook.com/mahmoudmortada97/" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mahmoudmortada97/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/mahmoudmortada97" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <p>
+            Copyright <span class="text-danger"> @Mahmoud Mortada </span> 2023
+            All Rights Reserved.
+          </p>
+        </footer>
+      </div>
+    </div>
+    <!-- Side Bar -->
+
+    <!-- Search Page -->
+    <section id="search" class="d-none">
+      <div class="container">
+        <div class="content">
+          <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input
+              type="text"
+              class="input-search"
+              placeholder="Search by meal name..."
+              id="searchByName"
+            />
+          </div>
+          <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input
+              type="text"
+              class="input-search"
+              placeholder="Search by meal first letter ..."
+              maxlength="1"
+              id="searchByFirstLetter"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Search Page -->
+
+    <!-- Home Page -->
+    <section id="main" class="d-none">
+      <div class="container">
+        <div
+          class="row my-3 g-3 justify-content-center align-items-center meals-container"
+        ></div>
+      </div>
+    </section>
+    <!-- Home Page -->
+
+    <!-- Categories Page -->
+    <section id="categories" class="d-none">
+      <div class="container text-center">
+        <div
+          class="row my-3 g-3 justify-content-center align-items-center category-container"
+        ></div>
+      </div>
+    </section>
+    <!-- Categories Page -->
+
+    <!-- Area Page -->
+    <section id="area" class="d-none">
+      <div class="container text-center">
+        <div
+          class="row my-3 g-4 justify-content-center align-items-center text-white area-container"
+        ></div>
+      </div>
+    </section>
+    <!-- Area Page -->
+
+    <!-- Ingredients Page -->
+    <section id="ingredients" class="d-none">
+      <div class="container text-center">
+        <div
+          class="row my-3 g-3 justify-content-center align-items-center text-white ingredient-container"
+        ></div>
+      </div>
+    </section>
+    <!-- Ingredients Page -->
+
+    <!-- Contact Us Page -->
+    <section id="contact-us">
+      <div class="container">
+        <header class="text-center fw-bolder display-4">Contact Us</header>
+
+        <form action="#">
+          <div class="form first">
+            <div class="details-contact personal">
+              <div class="fields">
+                <div class="input-field">
+                  <label>Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                    data-inputType="name"
+                  />
+                  <p class="bg-danger text-white p-1" id="firstname-error">
+                    Special characters and numbers not allowed
+                  </p>
+                </div>
+
+                <div class="input-field">
+                  <label>Age</label>
+                  <input
+                    type="number"
+                    placeholder="Enter your Age"
+                    required
+                    data-inputType="age"
+                  />
+                  <p class="bg-danger text-white p-1">
+                    Enter Age Between 18 till 80
+                  </p>
+                </div>
+
+                <div class="input-field">
+                  <label>Email</label>
+                  <input
+                    type="text"
+                    placeholder="Enter your email"
+                    required
+                    data-inputType="email"
+                  />
+                  <p class="bg-danger text-white p-1">
+                    Enter Valid Email Address
+                  </p>
+                </div>
+
+                <div class="input-field">
+                  <label>Mobile Number</label>
+                  <input
+                    type="number"
+                    placeholder="Enter mobile number"
+                    required
+                    data-inputType="phone"
+                  />
+                  <p class="bg-danger text-white p-1">
+                    Enter Valid Mobile Number
+                  </p>
+                </div>
+
+                <div class="input-field">
+                  <label>Password</label>
+                  <input
+                    type="password"
+                    placeholder="Enter Password"
+                    required
+                    data-inputType="pass"
+                    id="pass"
+                  />
+                  <p class="bg-danger text-white p-1">
+                    Min 8 char with 1 letter and 1 number
+                  </p>
+                </div>
+
+                <div class="input-field">
+                  <label>Confirm Password</label>
+                  <input
+                    type="password"
+                    placeholder="Enter Password again"
+                    required
+                    data-inputType="confirmPass"
+                    id="confirmPass"
+                  />
+                  <p class="bg-danger text-white p-1">Password doesnot match</p>
+                </div>
+              </div>
+            </div>
+
+            <button id="submitBtn" class="nextBtn mx-auto" disabled>
+              <span class="btnText">Submit</span>
+              <i class="uil uil-navigator"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Us Page -->
+
+    <!-- Details Section -->
+    <section id="details" class="d-none">
+      <i
+        class="fa-regular fa-circle-xmark position-absolute fs-5 text-white"
+        id="closeBtn"
+      >
+      </i>
+
+      <div class="container mt-4">
+        <div class="row row-games mt-4 justify-content-center details"></div>
+      </div>
+    </section>
+    <!-- Details Section -->
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- BootStrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- BootStrap -->
+
+    <!-- JQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- JQuery -->
+
+    <!-- JQuery UI-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- JQuery UI-->
+    <!-- Index.JS -->
+    <script src="js/index.js" type="module"></script>
+    <!-- Index.JS -->
+
+    <!-- ContactUs -->
+    <script src="./js/contact.js"></script>
+    <!-- ContactUs -->
+  </body>
+</html>

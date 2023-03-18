@@ -1,0 +1,31 @@
+{
+  "name": "non-framework-exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmoudmortada97/Yummy.git"
+  },
+  "keywords": [
+    "Food",
+    "Ingredients",
+    "Meals",
+    "Eating"
+  ],
+  "author": "Mahmoud Mortada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahmoudmortada97/Yummy/issues"
+  },
+  "homepage": "https://github.com/mahmoudmortada97/Yummy#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.3.0",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4",
+    "jquery-ui": "^1.13.2"
+  }
+}

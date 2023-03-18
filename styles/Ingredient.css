@@ -1,0 +1,7 @@
+#ingredients .ingredient p {
+    display: -webkit-box;
+    overflow: unset;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  

@@ -1,0 +1,9 @@
+#details #country {
+  width: 50px;
+}
+#closeBtn {
+  top: 20px;
+  right: 20px;
+  color: whitesmoke;
+  cursor: pointer;
+}
