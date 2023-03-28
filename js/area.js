@@ -19,11 +19,12 @@ export default class Area {
       } >
         <div class="content position-relative overflow-hidden ">
           <img id="id-${i}"
-            src="http://www.geognos.com/api/en/countries/flag/${
+            src="  https://flagcdn.com/192x144/${
               getCountryCode(areasAPIData[i].strArea)
-                ? getCountryCode(areasAPIData[i].strArea)
+                ? getCountryCode(areasAPIData[i].strArea).toLocaleLowerCase()
                 : "UN"
             }.png"
+          
             class="img-fluid rounded-3 mb-3"
             alt=""
             role="button"
