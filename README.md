@@ -11,7 +11,7 @@ Yummy is a web application for browsing and sharing recipes. It allows users to 
 
 ## Installation
 
-To use Yummy, simply visit the website at [https://your-yummy-website.com]([https://your-yummy-website.com](https://mahmoudmortada97.github.io/Yummy/)).
+To use Yummy, simply visit the website at [https://mahmoudmortada97.github.io/Yummy/](https://mahmoudmortada97.github.io/Yummy/).
 
 ## Contributing
 
